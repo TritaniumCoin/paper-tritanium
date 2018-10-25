@@ -1,5 +1,5 @@
-# paper-turtle
+# paper-tritanium
 
-**TurtleCoin Paper Wallet Generator**
+**TritaniumCoin Paper Wallet Generator**
 
-https://turtlecoin.lol/wallet
+http://www.tritaniumcoin.com/wallet
