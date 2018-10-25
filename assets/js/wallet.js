@@ -140,7 +140,7 @@ function genwallet_prefix_worker()
   wallet_keys_widget.innerHTML = keys.privateKeys;
 
   qr=new QRCode(address_qr_widget, {correctLevel:QRCode.CorrectLevel.L});
-  qr.makeCode("DERO":"+keys.public_addr);
+  qr.makeCode("TTNZ":"+keys.public_addr);
 }
 
 var zerohex="0000000000000000000000000000000000000000000000000000000000000000";
@@ -150,7 +150,7 @@ var highest_address=cnUtil.pubkeys_to_string(ffhex,ffhex);
 
 function is_valid_prefix(prefix)
 {
-  if (prefix.length <= 0 || prefix.length >= 95)
+  if (prefix.length <= 0 || prefix.length >= 98)
     return false;
   var lowest=lowest_address.substr(0,prefix.length);
   var highest=highest_address.substr(0,prefix.length);
@@ -192,8 +192,8 @@ function genwallet_prefix()
     prefix_widget = document.getElementById("prefix_widget");
     prefix = prefix_widget.value;
     prefix.trim();
-    if (prefix.length < 5 || prefix[0] != "TRTL") {
-      alert("Bad prefix "+prefix+" should start with K and be at least one extra character");
+    if (prefix.length < 5 || prefix[0] != "Tri") {
+      alert("Bad prefix "+prefix+" should start with Tri and be at least one extra character");
       return;
     }
     if (!is_valid_prefix(prefix)) {
